@@ -1,10 +1,7 @@
 # QuotesBot
 Configurable Telegram bot that schedules random motivational quotes. Implemented with the [python-telegram-bot](https://python-telegram-bot.readthedocs.io/en/stable/) API library.
 
-Usage is QuotesBot.py <TOKEN>, where TOKEN must be a valid access token provided by [@BotFather](https://telegram.me/botfather).
-
-
-QuotesBot accepts the following commmands:
+Usage is **QuotesBot.py** *TOKEN*, where TOKEN must be a valid access token provided by [@BotFather](https://telegram.me/botfather). QuotesBot accepts the following commmands:
 
 + **/start** - welcomes you.
 
