@@ -36,17 +36,19 @@ def finish_command(update: Update, context: CallbackContext) -> None:
 """ List all commands and their specifications. """
 def help_command(update: Update, context: CallbackContext) -> None:    
     msg = ""
-    msg += "*/start* welcomes you.\n"
-    msg += "*/finish* wishes you well :-)\n"
-    msg += "*/now* prints the current date and time " \
-        "(in *YYYY:MM:DD - HH:MM:SS* format).\n"
-    msg += "*/set_quotes* toggle the schedule option. Parameter is either "\
-        "*on* and *off*.\n"
-    msg += "*/set_period* sets the scheduler period. " \
-        " Supported format: *HH:MM:SS*.\n"
-    msg += "*/once* schedules a one-time-only quote.\n"
-    msg += "*/random_quote* prints a random quote.\n\n"
-    msg += "*/help* prints this message.\n"
+    msg += "*/start* - welcomes you.\n"
+    msg += "*/now* - prints the current date and time " \
+        "(in *YYYY:MM:DD - HH:MM:SS* format).\n"   
+    msg += "*/random_quote* - immediately sends a quote.\n"
+    msg += "*/set_period* <PARAMETER> - schedule periodic quotes. " \
+        " Supported format for PARAMETER: *HH:MM:SS*.\n"
+    msg += "*/once* <PARAMETER> - schedules a one-time-only quote."\
+        "Supported format for PARAMETER: *HH:MM:SS*.\n"
+    msg += "*/set_quotes* <PARAMETER> - used to resume or pause the scheduler"\
+        " (note: pausing the scheduler does not remove the scheduled quotes)."\
+                                    "PARAMETER must be either *on* or *off*.\n"
+    msg += "*/finish* clears the schedule, removing all pending quotes.\n"
+    msg += "\n*/help* prints this message.\n"
     update.message.reply_text(msg, parse_mode=ParseMode.MARKDOWN)
 
 
